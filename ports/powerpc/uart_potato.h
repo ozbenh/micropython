@@ -24,6 +24,6 @@
  * THE SOFTWARE.
  */
 
-void potato_uart_init(void);
-char potato_uart_read(void);
-void potato_uart_write(char c);
+void potato_uart_init(unsigned long base, unsigned int freq, unsigned int bauds);
+void potato_uart_tx_strn(const char *str, mp_uint_t len);
+int potato_uart_rx_chr(void);
